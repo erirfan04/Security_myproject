@@ -10,6 +10,7 @@ def list_courses(request):
     courses = Course.objects.all().values("id", "name", "description")
     return Response(list(courses))
     Hello how are you?
+    i am good how about you?
 """
 @api_view(["GET"])
 @role_required(["student", "instructor", "admin"])
